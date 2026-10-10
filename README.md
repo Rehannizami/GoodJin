@@ -58,16 +58,35 @@ GoodJin transforms the standard terminal into a high-performance productivity co
 
 ---
 
+## 📦 Installation & Prerequisites
+
+GoodJin requires **Python 3.8+** and the [`rich`](https://github.com/Textualize/rich) library:
+
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Or if using Arch Linux / PEP 668 managed environments:
+python -m pip install --user --break-system-packages -r requirements.txt
+# (or use a virtualenv: python -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt)
+```
+
+---
+
 ## 🚀 Quick Start
 
 ### 1. Launch Interactive Dashboard
 Run any of the following inside the `GoodJin` directory:
 ```bash
+# Linux / macOS
+./run.sh
+# or
+python -m goodjin
+
+# Windows
 .\goodjin.cmd
 # or
 .\run.bat
-# or
-python -m goodjin
 ```
 
 ### 2. Direct CLI Commands

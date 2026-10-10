@@ -38,7 +38,14 @@ def _play_alert_sound(style: str = "error") -> None:
 def _show_msgbox_sync(title: str, message: str, style: str = "error") -> None:
     """Synchronous invocation of native Windows MessageBoxW."""
     if sys.platform != "win32":
-        # Fallback for non-windows (print terminal bell)
+        # Desktop notification fallback for Linux/non-Windows
+        try:
+            import subprocess
+            urgency = "critical" if style == "error" else ("normal" if style == "warning" else "low")
+            subprocess.run(["notify-send", "-u", urgency, title, message], check=False, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        except Exception:
+            pass
+        # Terminal bell fallback
         print(f"\a\n[{title}] {message}")
         return
 
