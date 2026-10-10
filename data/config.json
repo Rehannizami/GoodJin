@@ -1,0 +1,14 @@
+{
+    "work_duration": 25,
+    "short_break": 5,
+    "long_break": 15,
+    "rounds_before_long_break": 4,
+    "auto_start_break": false,
+    "auto_start_work": false,
+    "sound_enabled": true,
+    "popups_enabled": true,
+    "popup_style": "error",
+    "theme": "tokyo_night",
+    "default_tag": "DeepWork",
+    "daily_target": 8
+}
