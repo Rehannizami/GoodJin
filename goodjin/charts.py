@@ -187,7 +187,7 @@ def render_history_table(limit: int = 15, theme_name: str = "tokyo_night") -> Ta
     table.add_column("Type", justify="center", width=10)
     table.add_column("Duration", justify="right", style="cyan", width=8)
     table.add_column("Tag", style="magenta", width=10)
-    table.add_column("Task Title", style="white", ratio=1)
+    table.add_column("Task Title", style="white", min_width=16)
     table.add_column("Status", justify="center", width=11)
 
     for r in records:
